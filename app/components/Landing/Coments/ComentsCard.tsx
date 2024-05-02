@@ -20,9 +20,9 @@ const coments = [
 export function ComentsCard() {
 
     return (
-        <><section className="flex gap-8 flex-wrap justify-center">
-            {coments.map((coment) => (
-                <div className="bg-white border border-lightBlue text-black flex relative gap-6 flex-col text-start p-4 w-72 h-min">
+        <section className="flex gap-8 flex-wrap justify-center">
+            {coments.map((coment, index) => (
+                <div className="bg-white border border-lightBlue text-black flex relative gap-6 flex-col text-start p-4 w-72 h-min" key={index}>
                     <p>{`<p> ${coment.text} <p/>`}</p>
                     <div className="flex gap-4 items-center">
                         <Image src={"/avatar.jpg"} height={40} width={40} alt={""} priority className="h-14 w-14 border border-black rounded-full object-cover"></Image>
@@ -34,6 +34,5 @@ export function ComentsCard() {
                 </div>
             ))}
         </section>
-        </>
     );
 }

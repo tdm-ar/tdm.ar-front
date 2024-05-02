@@ -5,7 +5,7 @@ import { ContactButton } from "./Button/ContactButton"
 import { IconBrandInstagram, IconBrandX, IconBrandLinkedin, IconBrandFigma } from "@tabler/icons-react";
 
 export function Footer() {
-  const icons = [<IconBrandInstagram />, <IconBrandX />, <IconBrandLinkedin />, <IconBrandFigma />];
+  const icons = [<IconBrandInstagram key={0} />, <IconBrandX key={1}/>, <IconBrandLinkedin key={2} />, <IconBrandFigma key={3} />];
 
   return (
     <motion.footer
@@ -24,8 +24,8 @@ export function Footer() {
           ))}
         </div>
         <div>
-          <p>TomasDiMauro@tdm.ar</p>
-          <p>+223678564</p>
+          <p>tomas@tdm.ar</p>
+          <p>+54 (223) 3049354</p>
         </div>
       </section>
     </motion.footer>
