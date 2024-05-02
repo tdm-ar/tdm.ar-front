@@ -1,0 +1,26 @@
+.menu_open {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  transition: .7s;
+}
+
+.menu_closed {
+  clip-path: polygon(50% 0%, 50% 0%, 50% 100%, 50% 100%);
+  transition: .7s;
+}
+
+.HeaderButtons:hover {
+  background-color: #fff;
+}
+
+.HeaderButtons:hover b {
+  color: #1e3a8a;
+}
+
+@keyframes scroll {
+  0% {
+      transform: translateX(0);
+  }
+  100% {
+      transform: translateX(calc(-250px * 7));
+  }
+}

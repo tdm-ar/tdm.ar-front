@@ -2,28 +2,82 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "Satoshi";
+  src: url("../font/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.woff2") format("woff2"),
+  url("../font/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.woff") format("woff"),
+  url("../font/X6XYTKIVDUW7GZTZPZNN4EUM5KH54KHF.ttf") format("truetype");
+  font-weight: 300 900;
+  font-display: swap;
+  font-style: normal;
+}
+/* Clash Display */
+@font-face {
+  font-family: "Clash Display";
+  src: url("../font/BSY64LPTT3OPLVKAZKL3AHKRWZ3D74AC.woff2") format("woff2"), 
+  url("../font/BSY64LPTT3OPLVKAZKL3AHKRWZ3D74AC.woff") format("woff"), 
+  url("../font/BSY64LPTT3OPLVKAZKL3AHKRWZ3D74AC.ttf") format("truetype");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Clash Display";
+  src: url("../font/JTSL5QESUXATU47LCPUNHZQBDDIWDOSW.woff2") format("woff2"), 
+  url("../font/JTSL5QESUXATU47LCPUNHZQBDDIWDOSW.woff") format("woff"), 
+  url("../font/JTSL5QESUXATU47LCPUNHZQBDDIWDOSW.ttf") format("truetype");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+:root {
+  --background: #f9f9f9;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --darkBlue: #2804F6;
+  --lightBlue: #274EE9;
+  --cream: #F3F0D0;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  color: rgb(var(--background));
+  background: var(--background);
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--darkBlue);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+h1, h2, h3 {
+  font-family: "Clash Display", sans-serif;
+  font-style: normal;
+  font-weight: 800 !important;
+  line-height: 42px !important;
+  @media (min-width: 640px) {
+    line-height: 68px !important;
+  }
+}
+
+h2{
+  line-height: 55px !important;
+  @media (min-width: 640px) {
+    line-height: 85px !important;
+  }
+}
+
+p, b{
+  font-family: "Satoshi";
+  font-style: normal;
+  line-height: normal;
 }
 
 @layer utilities {

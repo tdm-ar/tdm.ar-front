@@ -1,0 +1,98 @@
+.buttonMain {
+    border-radius: 0px;
+    padding: 8px 30px;
+    background-color: var(--darkBlue);
+    position: relative;
+    border: none;
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonMain>span {
+    font-family: "Satoshi", sans-serif;
+    font-size: 20px;
+    z-index: 2;
+    color: #ebf3fb;
+    font-weight: 700;
+}
+
+.buttonMain:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonMain:hover span {
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+    color: #fff;
+}
+
+.buttonSecondary {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    border-radius: 0px;
+    padding: 8px 30px;
+    background-color: var(--cream);
+    position: relative;
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonSecondary>span {
+    font-family: "Satoshi", sans-serif;
+    font-size: 20px;
+    color: var(--lightBlue);
+    font-weight: 700;
+}
+
+.buttonSecondary:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonSecondary:hover span {
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonSecondary .icon {
+    background: url(../../../public/secondaryIcon.svg);
+    height: 15px;
+    width: 10px;   
+}
+
+.buttonTertiary {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    border-radius: 0px;
+    padding: 8px 30px;
+    background-color: var(--lightBlue);
+    position: relative;
+    border: none;
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonTertiary>span {
+    font-family: "Satoshi", sans-serif;
+    font-size: 20px;
+    color: var(--cream);
+    font-weight: 700;
+}
+
+.buttonTertiary:hover {
+    cursor: pointer;
+    transform: scale(0.99);
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonTertiary:hover span {
+    transition: all 0.1s cubic-bezier(0.6, 0.6, 0, 0.1);
+}
+
+.buttonTertiary .icon {
+    background: url(../../../public/tertiaryIcon.svg);
+    height: 15px;
+    width: 10px;   
+}
+
+/*# sourceMappingURL=Button.module.css.map */
