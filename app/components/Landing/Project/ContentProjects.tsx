@@ -9,13 +9,26 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { carousel } from "../../../lib/images";
-import { motion } from "framer-motion";
+import { animate, motion, useMotionValue, useTransform } from "framer-motion";
+import { useEffect } from "react";
+import { useInView } from "react-intersection-observer";
 
 
 export function Projects() {
 
+  const [ref, inView] = useInView();
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, Math.round);
+
+  useEffect(() => {
+    if (inView) {
+      const animation = animate(count, 10, { duration: 4 });
+      return animation.stop;
+    }
+  }, [inView]);
+
   return (
-    <section className="min-h-screen relative flex items-center flex-col justify-center md:gap-y-16 gap-y-8 py-16 px-[5%] border-b border-gray-500 ">
+    <section className="min-h-screen relative flex items-center flex-col justify-center md:gap-y-16 gap-y-8 py-16 md:px-[5%] px-8 border-b border-gray-500 ">
       <motion.h3
         className="md:text-6xl text-4xl text-darkBlue"
         initial={{ opacity: 0, translateY: -60 }}
@@ -23,10 +36,13 @@ export function Projects() {
         whileInView={{ opacity: 1, translateY: 0 }}>
         Diseñar grandes productos es difícil.<br />Hemos hecho más de 10 de ellos.
       </motion.h3>
-      <div className="w-full flex md:flex-row flex-col justify-center gap-8 md:px-16 px-[5%]">
-        <div className="h-[450px] md:w-1/3 bg-darkBlue flex flex-col items-center justify-center relative p-8">
-          <h3 className="text-cream text-9xl">+10</h3>
-          <Link className="absolute bottom-16" href={'/projects'}>
+      <div className="w-full flex md:flex-row flex-col justify-center gap-8 md:px-[5%]">
+        <div ref={ref} className="md:h-[450px] h-96 md:w-1/3 bg-darkBlue flex flex-col items-center justify-center gap-8 relative p-8">
+          <div>
+          <h3 className="text-cream text-9xl inline">+</h3>
+          <motion.h3 className="text-cream text-9xl w-40 inline-block">{rounded}</motion.h3>
+          </div>
+          <Link href={'/projects'}>
             <Button type="secondary">Ver Proyectos</Button>
           </Link>
         </div>

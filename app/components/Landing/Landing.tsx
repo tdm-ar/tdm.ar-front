@@ -10,8 +10,8 @@ import { motion } from "framer-motion";
 export function Landing(props: any) {
 
   return (
-    <section className="h-screen relative flex items-center flex-col justify-center gap-y-16 md:px-[20%] px-[5%]">
-      <div className="flex flex-col items-center gap-4">
+    <section className="min-h-screen relative flex items-center flex-col justify-center py-32 gap-y-16 md:px-[20%] px-8">
+      <div className="flex flex-col items-center gap-4 z-20">
         <motion.h2
           className="md:text-7xl text-5xl"
           initial={{ opacity: 0, translateY: -60 }}
@@ -32,7 +32,7 @@ export function Landing(props: any) {
         </motion.div>
       </div>
       <motion.p
-        className="text-xl md:w-4/12 z-20 "
+        className="text-xl md:w-7/12 z-20 "
         initial={{ opacity: 0, scale: 0.95 }}
         transition={{ duration: 1, }}
         whileInView={{ opacity: 1, scale: 1 }}>

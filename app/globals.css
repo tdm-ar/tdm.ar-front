@@ -61,17 +61,6 @@ h1, h2, h3 {
   font-family: "Clash Display", sans-serif;
   font-style: normal;
   font-weight: 800 !important;
-  line-height: 42px !important;
-  @media (min-width: 640px) {
-    line-height: 68px !important;
-  }
-}
-
-h2{
-  line-height: 55px !important;
-  @media (min-width: 640px) {
-    line-height: 85px !important;
-  }
 }
 
 p, b{

@@ -9,18 +9,9 @@
 }
 
 .HeaderButtons:hover {
-  background-color: #fff;
+  background: #fff;
 }
 
 .HeaderButtons:hover b {
   color: #1e3a8a;
-}
-
-@keyframes scroll {
-  0% {
-      transform: translateX(0);
-  }
-  100% {
-      transform: translateX(calc(-250px * 7));
-  }
 }
