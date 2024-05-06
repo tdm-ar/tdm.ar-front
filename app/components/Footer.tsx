@@ -25,7 +25,6 @@ export function Footer() {
         </div>
         <div>
           <p>tomas@tdm.ar</p>
-          <p>+54 (223) 3049354</p>
         </div>
       </section>
     </motion.footer>
