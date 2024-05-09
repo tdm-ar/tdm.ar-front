@@ -25,7 +25,7 @@ export function Information() {
         initial={{ opacity: 0, translateY: 60 }}
         transition={{ duration: 1 }}
         whileInView={{ opacity: 1, translateY: 0 }}>
-        <div className="md:w-[30%] bg-cream border border-lightBlue text-lightBlue flex flex-col items-center justify-between gap-4 py-8 px-7 transition hover:bg-lightBlue hover:text-cream hover:scale-[1.02]">
+        <div className="md:w-[30%] bg-cream border border-lightBlue text-lightBlue flex flex-col items-center justify-between gap-4 py-8 px-7 transition hover:scale-[1.02]">
           <h3 className="text-4xl">Desarrollo de MVPs</h3>
           <p className="text-base">
             Transformamos sus ideas visionarios en aplicaciones funcionales y
@@ -34,7 +34,7 @@ export function Information() {
           </p>
           <ContactButton />
         </div>
-        <div className="md:w-[45%] bg-cream border border-lightBlue text-lightBlue flex flex-col items-center justify-center gap-4 py-8 px-7 transition hover:bg-lightBlue hover:text-cream hover:scale-[1.02]">
+        <div className="md:w-[45%] bg-cream border border-lightBlue text-lightBlue flex flex-col items-center justify-center gap-4 py-8 px-7 transition hover:scale-[1.02]">
           <h3 className="text-4xl">Rediseño de aplicaciones existentes</h3>
           <p className="text-base">
             Analizamos exhaustivamente la experiencia de usuario actual de su aplicación.

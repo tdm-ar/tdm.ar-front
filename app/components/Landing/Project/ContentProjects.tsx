@@ -36,7 +36,7 @@ export function Projects() {
         whileInView={{ opacity: 1, translateY: 0 }}>
         Diseñar grandes productos es difícil.<br />Hemos hecho más de 10 de ellos.
       </motion.h3>
-      <div className="w-full flex md:flex-row flex-col justify-center gap-8 md:px-[5%]">
+      <div className="w-full flex md:flex-row flex-col justify-center gap-8 2xl:px-[5%]">
         <div ref={ref} className="md:h-[450px] h-96 md:w-1/3 bg-darkBlue flex flex-col items-center justify-center gap-8 relative p-8">
           <div>
           <h3 className="text-cream text-9xl inline">+</h3>
@@ -47,7 +47,7 @@ export function Projects() {
           </Link>
         </div>
         <Swiper
-          className="md:w-[800px] md:h-[450px] h-[250px] w-full border border-black mySwiper"
+          className="md:w-[800px] md:h-[450px] h-full w-full border border-black mySwiper"
           centeredSlides={true}
           autoplay={{
             delay: 2500,

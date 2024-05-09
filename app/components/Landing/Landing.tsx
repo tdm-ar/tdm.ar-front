@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export function Landing(props: any) {
 
   return (
-    <section className="min-h-screen relative flex items-center flex-col justify-center py-32 gap-y-16 md:px-[20%] px-8">
+    <section className="min-h-screen relative flex items-center flex-col justify-center py-32 2xl:gap-y-16 gap-y-8 2xl:px-[20%] px-8">
       <div className="flex flex-col items-center gap-4 z-20">
         <motion.h2
           className="md:text-7xl text-5xl"
@@ -49,7 +49,7 @@ export function Landing(props: any) {
         width={20}
         height={20}
         priority
-        className="absolute bottom-16 z-20"
+        className="absolute 2xl:bottom-16 bottom-8 z-20"
       />
       <div className="bg-gradient-to-t from-darkBlue to-white absolute bottom-0 w-full h-96 opacity-30 z-0"></div>
     </section>
