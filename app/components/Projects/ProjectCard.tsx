@@ -15,8 +15,10 @@ export function ProjectCard(project: any ) {
             <div className="bg-lightBlue h-96 flex relative flex-col justify-evenly items-start p-4 pt-0 max-w-72 text-white"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
-                    
+                    <div className="flex z-20 gap-x-4">
+                <Image src={project.src} height={35} width={20} alt={""} className="z-20 "/>
                 <h3 className="text-xl z-20">{project.name}</h3>
+                </div>
                 <p className="z-20">{project.subtitle}</p>
                 <motion.div
                     initial={{ opacity: 0, translateX: 70 }}

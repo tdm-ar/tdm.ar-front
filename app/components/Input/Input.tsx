@@ -1,5 +1,3 @@
-import type { ReactNode } from 'react';
-
 interface InputProps {
     text: string;
     type: string;

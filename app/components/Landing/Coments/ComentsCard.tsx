@@ -25,7 +25,7 @@ export function ComentsCard() {
                 <div className="bg-white border border-lightBlue text-black flex relative gap-6 flex-col text-start p-4 w-72 h-min" key={index}>
                     <p>{`<p> ${coment.text} <p/>`}</p>
                     <div className="flex gap-4 items-center">
-                        <Image src={"/avatar.jpg"} height={40} width={40} alt={""} priority className="h-14 w-14 border border-black rounded-full object-cover"></Image>
+                        <Image src={"/avatar.jpg"} height={40} width={40} alt={""} priority className="h-14 w-14 border border-black rounded-full object-cover"/>
                         <div>
                             <b>{coment.name}</b>
                             <p>{coment.busisnes}</p>

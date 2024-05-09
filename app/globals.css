@@ -43,6 +43,7 @@
 body {
   color: rgb(var(--background));
   background: var(--background);
+  line-height: normal;
 }
 
 ::-webkit-scrollbar {
