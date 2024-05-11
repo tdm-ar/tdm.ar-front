@@ -12,7 +12,7 @@ export function ProjectCard(project: any ) {
 
     return (
         <>
-            <div className="bg-lightBlue h-96 flex relative flex-col justify-evenly items-start p-4 pt-0 max-w-72 text-white"
+            <div className="bg-lightBlue h-96 flex relative flex-col justify-evenly items-start transition p-4 pt-0 max-w-72 text-white"
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}>
                     <div className="flex z-20 gap-x-4">
@@ -23,7 +23,7 @@ export function ProjectCard(project: any ) {
                 <motion.div
                     initial={{ opacity: 0, translateX: 70 }}
                     animate={{ opacity: isHovered ? 1 : 0, translateX: isHovered ? 0 : 70 }}
-                    transition={{ duration: 0.3 }}
+                    transition={{ duration: 0.3, ease: "easeOut" }}
                     className={`flex flex-col items-end text-start z-20 gap-4 ${isHovered ? 'visible' : 'invisible'}`}
                 >
                     <p>{project.description}</p>
@@ -33,8 +33,9 @@ export function ProjectCard(project: any ) {
                 </motion.div>
                 <motion.div
                 className={`absolute w-full h-full bg-[#000] bg-opacity-30 top-0 right-0 ${isHovered ? 'visible' : 'invisible'}`}
-                initial={{ opacity: 0, translateX: 10 }}
-                animate={{ opacity: isHovered ? 1 : 0, translateX: isHovered ? 0 : 10 }}
+                initial={{ opacity: 0}}
+                transition={{ duration: 0.3, ease: "easeOut" }}
+                animate={{ opacity: isHovered ? 1 : 0 }}
                 ></motion.div>
                 <div className="absolute w-full h-full bg-gradient-to-t from-transparent to-[rgba(0,0,0,0.3)] top-0 right-0 "></div>
             </div>

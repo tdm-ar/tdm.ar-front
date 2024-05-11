@@ -6,7 +6,7 @@ import { TextProjects } from "@/app/components/Projects/TextProjects";
 
 export default function Page() {
   return (
-    <section className="min-h-screen text-center">
+    <section className="min-h-screen text-center ">
       <Landing
         h2="Tap Wise"
         description="Descripción un poco mas detallada sobre lo realizado

@@ -9,7 +9,7 @@ export default function Page() {
       <Landing
         h2="Nuestros proyectos"
         description="En TDM.ar hacemos los proyectos de la mejor manera posible, diseñamos y comercializamos fantásticos productos digitales" />
-      <section className="min-h-screen relative flex md:flex-row flex-col items-center gap-16 justify-center py-16 flex-wrap">
+      <section className="min-h-screen relative flex md:flex-row flex-col items-center gap-16 justify-center py-16 flex-wrap bg-white">
       <ProjectCard 
       name="TapWise" 
       subtitle="Lorem ipsum dolor sit amet" 

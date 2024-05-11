@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "./components/Button/Button";
 import { Landing } from "./components/Landing/Landing";
-import { Projects } from "./components/Landing/Project/ContentProjects";
+import { Projects } from "./components/Landing/Projects/ContentProjects";
 import { Information } from "./components/Landing/Information";
 import { Coments } from "./components/Landing/Coments/ContentComents";
 import { Contact } from "./components/Landing/Contact/Contact";
