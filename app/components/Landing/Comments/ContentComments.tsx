@@ -1,9 +1,9 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { ComentsCard } from "./ComentsCard";
+import { CommentsCard } from "./CommentsCard";
 
-export function Coments() {
+export function Comments() {
 
   return (
     <section className="min-h-screen relative flex items-center flex-col justify-center md:gap-y-16 gap-y-8 py-16 bg-white">
@@ -16,7 +16,7 @@ export function Coments() {
         </motion.h3>
       <div className="slider">
         <div className="slide-track">
-        <ComentsCard/>
+        <CommentsCard/>
         </div>
       </div>
     </section>

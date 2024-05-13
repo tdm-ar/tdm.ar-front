@@ -10,19 +10,8 @@ export default function Page() {
         h2="Nuestros proyectos"
         description="En TDM.ar hacemos los proyectos de la mejor manera posible, diseñamos y comercializamos fantásticos productos digitales" />
       <section className="min-h-screen relative flex md:flex-row flex-col items-center gap-16 justify-center py-16 flex-wrap bg-white">
-      <ProjectCard 
-      name="TapWise" 
-      subtitle="Lorem ipsum dolor sit amet" 
-      src="./tapWiseIcon.svg"
-      id="1" 
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Facilisi etiam dignissim diam quis enim lobortis. Accumsan sit amet nulla facilisi morbi."/>
-      <ProjectCard 
-      name="Otro" 
-      subtitle="Lorem ipsum dolor sit amet" 
-      id="2" 
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-      Facilisi etiam dignissim diam quis enim lobortis. Accumsan sit amet nulla facilisi morbi."/>
+      <ProjectCard />
+  
       </section>
     </main>
   );
