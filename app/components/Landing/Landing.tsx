@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 export function Landing(props: any) {
 
   return (
-    <section className="min-h-screen  flex items-center flex-col justify-center py-32 2xl:gap-y-16 gap-y-8 2xl:px-[20%] px-8 sticky top-0 -z-20">
+    <section className="min-h-screen  flex items-center flex-col justify-center py-32 2xl:gap-y-16 gap-y-8 2xl:px-[20%] px-8 sticky top-0 ">
       <div className="flex flex-col items-center gap-4 z-20">
         <motion.h2
           className="md:text-7xl text-5xl"

@@ -19,7 +19,6 @@ export function CommentsCard() {
     useEffect(() => {
         fetchData()
             .then(response => {
-                console.log(response);
                 if (response && response.data && response.data.length > 0) {
                     const commentsData = response.data.map((item: { attributes: any; }) => item.attributes);
                     setComments(commentsData);

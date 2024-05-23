@@ -15,7 +15,7 @@ export default function Home() {
         h2="Sobre Nosotros"
         description="En nuestra agencia, nos dedicamos a convertir tus sueños en realidades tangibles, utilizando creatividad, pasión y un enfoque personalizado en cada proyecto." />
       <section className="min-h-screen w-full bg-gray-100">
-        <div className="h-screen w-full flex items-center justify-center sticky top-0">
+        <div className="h-screen w-full flex items-center justify-center sticky top-0 bg-gray-100">
           <motion.h2
             className="md:text-7xl text-5xl"
             animate={{

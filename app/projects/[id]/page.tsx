@@ -4,14 +4,31 @@ import { Landing } from "../../components/Landing/Landing";
 import { ImageProjects } from "@/app/components/Projects/ImageProjects";
 import { TextProjects } from "@/app/components/Projects/TextProjects";
 
-export default function Page() {
+
+function fetchData(id: number) {
+  const { URL = `https://backend.tdm.ar/api/proyects/${id}?populate=*` } = process.env;
+  return fetch(URL)
+      .then(response => {
+          if (!response.ok) {
+              throw new Error('Error al obtener los proyectos');
+          }
+          return response.json();
+      })
+      .catch(error => {
+          console.error('Error al obtener proyectos:', error);
+          return [];
+      });
+}
+
+export default async function Page({params}:any) {
+  const blog = await fetchData(params.id);
+  console.log(blog)
+
   return (
     <section className="min-h-screen text-center ">
       <Landing
-        h2="Tap Wise"
-        description="Descripción un poco mas detallada sobre lo realizado
-        en en el proyecto y que aportamos a al mismo
-        Y bueno esto es un poco de relleno para alargar el texto" />
+        h2={blog.data.attributes.title}
+        description={blog.data.attributes.description} />
     <ImageProjects img="/test.webp"/>
     <TextProjects 
     h3="El reto"

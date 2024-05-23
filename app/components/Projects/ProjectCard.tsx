@@ -12,13 +12,12 @@ export function ProjectCard() {
     useEffect(() => {
         fetchData()
             .then(response => {
-                console.log(response);
                 if (response && response.data && response.data.length > 0) {
-                    const proyectsData = response.data.map((item: { attributes: any; }) => ({
+                    const proyectsData = response.data.map((item: { id: number; attributes: any; }) => ({
+                        id: item.id,
                         ...item.attributes,
                         isHovered: false
                     }));
-                    console.log(proyectsData);
                     setProyects(proyectsData);
                 } else {
                     console.error('No se encontraron proyectos.');
@@ -56,15 +55,16 @@ export function ProjectCard() {
         setProyects(updatedProyects);
     }
 
+
     return (
         <>
             {proyects.map((project: any, index: number) => (
-                <div className="bg-lightBlue h-96 flex relative flex-col justify-evenly items-start transition p-4 pt-0 max-w-72 text-white"
+                <div key={project.id} className="bg-lightBlue h-96 flex relative flex-col justify-evenly items-start transition p-4 pt-0 max-w-72 text-white"
                     onMouseEnter={() => handleMouseEnter(index)}
                     onMouseLeave={() => handleMouseLeave(index)}
                 >
                     <div className="flex z-20 gap-x-4">
-                        <Image src={`https://backend.tdm.ar${project.cover.data.attributes.url}`} height={35} width={20} alt={""} className="z-20 " />
+                        <Image src={`https://backend.tdm.ar${project.cover.data.attributes.url}`} height={35} width={20} alt={project.title} className="z-20" />
                         <h3 className="text-xl z-20">{project.title}</h3>
                     </div>
                     <p className="z-20">{project.subtitle}</p>
@@ -75,8 +75,8 @@ export function ProjectCard() {
                         className={`flex flex-col items-end text-start z-20 gap-4 ${project.isHovered ? 'visible' : 'invisible'}`}
                     >
                         <p>{project.description}</p>
-                        <Link href={`/projects/${project.title}`}>
-                            <Button type="secondary">Ver Mas</Button>
+                        <Link href={`/projects/${project.id}`}>
+                            <Button type="secondary">Ver Más</Button>
                         </Link>
                     </motion.div>
                     <motion.div
